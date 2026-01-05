@@ -402,3 +402,17 @@ body[data-display="inline"] #btnInline{ display:none; }
   margin-top:10px;
   min-height:16px;
 }
+
+/* ===== Center-only mode: 只保留中間清單 ===== */
+body[data-ui="center-only"] .hint,
+body[data-ui="center-only"] details.debugDetails,
+body[data-ui="center-only"] #detailSidebar,
+body[data-ui="center-only"] #detailDrawer,
+body[data-ui="center-only"] #drawerBackdrop,
+body[data-ui="center-only"] #detailPip,
+body[data-ui="center-only"] .top,
+body[data-ui="center-only"] .meta 
+body[data-ui="center-only"] .status {
+  display: none !important;
+}
+
