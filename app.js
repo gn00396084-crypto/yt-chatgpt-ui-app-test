@@ -601,4 +601,4 @@ channelTitle: ${payload?.channelTitle ?? "-"}`;
     setInterval(() => { updateCssVars(); refreshDebug(); }, 1200);
   })();
 })();
-document.body.setAttribute("data-ui", "clean");
+document.body.setAttribute("data-ui", "center-only");
