@@ -411,8 +411,8 @@ body[data-ui="center-only"] #detailDrawer,
 body[data-ui="center-only"] #drawerBackdrop,
 body[data-ui="center-only"] #detailPip,
 body[data-ui="center-only"] .top,
-body[data-ui="center-only"] .meta 
-body[data-ui="center-only"] .status {
+body[data-ui="center-only"] .meta,
+body[data-ui="center-only"] .status{
   display: none !important;
 }
 
