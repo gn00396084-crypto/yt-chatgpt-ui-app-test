@@ -341,7 +341,7 @@
   };
 
   const desiredPageSize = () => (getDisplayMode() === "fullscreen" ? 12 : 3);
-  const desiredThumbCount = () => (getDisplayMode() === "fullscreen" ? 6 : 2);
+  const desiredThumbCount = () => (getDisplayMode() === "fullscreen" ? 6 : 3);
 
   const render = (payload) => {
     const items = Array.isArray(payload.items) ? payload.items : (payload.item ? [payload.item] : []);
