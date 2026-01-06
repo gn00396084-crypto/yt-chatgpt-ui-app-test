@@ -94,12 +94,16 @@
 
   const safeJson = (v) => { try { return JSON.stringify(v); } catch { return String(v); } };
 
-  const computeLayout = () => {
-    const dm = getDisplayMode();
-    if (dm === "pip") return "pip";
-    if (dm === "fullscreen") return "split";
-    return (window.innerWidth >= 980) ? "split" : "drawer";
-  };
+ const computeLayout = () => {
+  const dm = getDisplayMode();
+  if (dm === "pip") return "pip";
+
+  // ✅ center-only：永遠用 drawer，避免 split 時走右側欄（但右側欄被隱藏）
+  if (document.body.getAttribute("data-ui") === "center-only") return "drawer";
+
+  if (dm === "fullscreen") return "split";
+  return (window.innerWidth >= 980) ? "split" : "drawer";
+};
 
   const updateCssVars = () => {
     const vw = Math.max(320, Math.floor(window.innerWidth || 0));
